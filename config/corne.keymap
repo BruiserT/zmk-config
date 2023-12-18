@@ -37,6 +37,17 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        active-colemak-dh {
+            bindings = <&mo 3>;
+            key-positions = <31 28>;
+            layers = <0>;
+            timeout-ms = <50>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -49,7 +60,7 @@
 
             bindings = <
 &kp MINUS  &kp Q             &kp W             &kp E               &kp R          &kp T                 &kp Y                  &kp U                  &kp I                &kp O              &kp P                  &kp EQUAL
-&kp GRAVE  &hrml LEFT_GUI A  &hrml LEFT_ALT S  &hrml LEFT_SHIFT D  &hrml LCTRL F  &kp G                 &kp H                  &hrmr RIGHT_CONTROL J  &hrmr RIGHT_SHIFT K  &hrmr RIGHT_ALT L  &hrml RIGHT_GUI COLON  &kp DOUBLE_QUOTES
+&kp GRAVE  &hrml LEFT_GUI A  &hrml LEFT_ALT S  &hrml LEFT_SHIFT D  &hrml LCTRL F  &kp G                 &kp H                  &hrmr RIGHT_CONTROL J  &hrmr RIGHT_SHIFT K  &hrmr RIGHT_ALT L  &hrml RIGHT_GUI COLON  &kp SINGLE_QUOTE
 &none      &kp Z             &kp X             &kp C               &kp V          &kp B                 &kp N                  &kp M                  &kp COMMA            &kp DOT            &kp FSLH               &none
                                                &mo 1               &kp BACKSPACE  &mt LEFT_SHIFT TAB    &mt RIGHT_SHIFT ENTER  &kp SPACE              &mo 2
             >;
