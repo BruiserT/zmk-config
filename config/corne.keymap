@@ -59,10 +59,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q             &kp W             &kp E               &kp R          &kp T                 &kp Y                  &kp U                  &kp I                &kp O              &kp P                      &kp MINUS
-&kp EQUAL   &hrml LEFT_GUI A  &hrml LEFT_ALT S  &hrml LEFT_SHIFT D  &hrml LCTRL F  &kp G                 &kp H                  &hrmr RIGHT_CONTROL J  &hrmr RIGHT_SHIFT K  &hrmr RIGHT_ALT L  &hrml RIGHT_GUI SEMICOLON  &kp SINGLE_QUOTE
-&kp GRAVE   &kp Z             &kp X             &kp C               &kp V          &kp B                 &kp N                  &kp M                  &kp COMMA            &kp DOT            &kp FSLH                   &kp BACKSLASH
-                                                &mo 1               &kp BACKSPACE  &mt LEFT_SHIFT TAB    &mt RIGHT_SHIFT ENTER  &kp SPACE              &mo 4
+&kp ESCAPE  &kp Q             &kp W               &kp E          &kp R             &kp T                 &kp Y                  &kp U              &kp I          &kp O                &kp P                      &kp MINUS
+&kp EQUAL   &hrml LEFT_ALT A  &hrml LEFT_SHIFT S  &hrml LCTRL D  &hrml LEFT_GUI F  &kp G                 &kp H                  &hrmr RIGHT_GUI J  &hrmr RCTRL K  &hrmr RIGHT_SHIFT L  &hrml RIGHT_ALT SEMICOLON  &kp SINGLE_QUOTE
+&kp GRAVE   &kp Z             &kp X               &kp C          &kp V             &kp B                 &kp N                  &kp M              &kp COMMA      &kp DOT              &kp FSLH                   &kp BACKSLASH
+                                                  &mo 1          &kp BACKSPACE     &mt LEFT_SHIFT TAB    &mt RIGHT_SHIFT ENTER  &kp SPACE          &mo 4
             >;
 
             label = "qwerty";
