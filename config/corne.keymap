@@ -40,11 +40,18 @@
     combos {
         compatible = "zmk,combos";
 
-        active-colemak-dh {
+        switch-colemak-dh {
             bindings = <&to 4>;
             key-positions = <31 28>;
             layers = <0>;
             timeout-ms = <50>;
+        };
+
+        switch-qwert {
+            bindings = <&to 0>;
+            key-positions = <31 28>;
+            timeout-ms = <50>;
+            layers = <4>;
         };
     };
 
@@ -107,7 +114,7 @@
             >;
         };
 
-        colemak_dh {
+        colemak-dh {
             bindings = <
 &trans  &kp Q             &kp W             &kp F          &kp P               &kp B     &kp J   &kp L                &kp U          &kp Y              &kp SEMICOLON      &trans
 &trans  &hrml LEFT_GUI A  &hrml LEFT_ALT R  &hrml LCTRL S  &hrml LEFT_SHIFT T  &kp G     &kp M   &hrmr RIGHT_SHIFT N  &hrmr RCTRL E  &hrmr RIGHT_ALT L  &hrmr RIGHT_GUI O  &trans
@@ -115,7 +122,7 @@
                                             &trans         &trans              &trans    &trans  &trans               &trans
             >;
 
-            label = "colemak_dh";
+            label = "colemak-dh";
         };
     };
 };
