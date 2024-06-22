@@ -41,14 +41,14 @@
         compatible = "zmk,combos";
 
         switch-colemak-dh {
-            bindings = <&to 4>;
-            key-positions = <31 28>;
-            layers = <0>;
+            bindings = <&to 0>;
+            key-positions = <4 7>;
+            layers = <4>;
             timeout-ms = <50>;
         };
 
         switch-qwert {
-            bindings = <&to 0>;
+            bindings = <&to 4>;
             key-positions = <31 28>;
             timeout-ms = <50>;
             layers = <4>;
@@ -58,21 +58,15 @@
     keymap {
         compatible = "zmk,keymap";
 
-        qwerty {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
+        colemak-dh {
             bindings = <
-&kp ESCAPE  &kp Q             &kp W               &kp E          &kp R             &kp T                   &kp Y                &kp U              &kp I          &kp O                &kp P                      &kp MINUS
-&kp EQUAL   &hrml LEFT_ALT A  &hrml LEFT_SHIFT S  &hrml LCTRL D  &hrml LEFT_GUI F  &kp G                   &kp H                &hrmr RIGHT_GUI J  &hrmr RCTRL K  &hrmr RIGHT_SHIFT L  &hrml RIGHT_ALT SEMICOLON  &kp SINGLE_QUOTE
-&kp GRAVE   &kp Z             &kp X               &kp C          &kp V             &kp B                   &kp N                &kp M              &kp COMMA      &kp DOT              &kp FSLH                   &kp BACKSLASH
-                                                  &mo 1          &kp SPACE         &mt LEFT_SHIFT ENTER    &mt RIGHT_SHIFT TAB  &kp BACKSPACE      &mo 2
+&trans  &kp Q             &kp W               &kp F          &kp P             &kp B     &kp J   &kp L              &kp U          &kp Y                &kp SEMICOLON      &trans
+&trans  &hrml LEFT_ALT A  &hrml LEFT_SHIFT R  &hrml LCTRL S  &hrml LEFT_GUI T  &kp G     &kp M   &hrmr RIGHT_GUI N  &hrmr RCTRL E  &hrmr RIGHT_SHIFT I  &hrmr RIGHT_ALT O  &trans
+&trans  &kp Z             &kp X               &kp C          &kp D             &kp V     &kp K   &kp H              &kp COMMA      &kp DOT              &kp FSLH           &trans
+                                              &trans         &trans            &trans    &trans  &trans             &trans
             >;
 
-            label = "qwerty";
+            label = "colemak-dh";
         };
 
         navigation {
@@ -114,15 +108,21 @@
             >;
         };
 
-        colemak-dh {
+        qwerty {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+
             bindings = <
-&trans  &kp Q             &kp W               &kp F          &kp P             &kp B     &kp J   &kp L              &kp U          &kp Y                &kp SEMICOLON      &trans
-&trans  &hrml LEFT_ALT A  &hrml LEFT_SHIFT R  &hrml LCTRL S  &hrml LEFT_GUI T  &kp G     &kp M   &hrmr RIGHT_GUI N  &hrmr RCTRL E  &hrmr RIGHT_SHIFT I  &hrmr RIGHT_ALT O  &trans
-&trans  &kp Z             &kp X               &kp C          &kp D             &kp V     &kp K   &kp H              &kp COMMA      &kp DOT              &kp FSLH           &trans
-                                              &trans         &trans            &trans    &trans  &trans             &trans
+&kp ESCAPE  &kp Q             &kp W               &kp E          &kp R             &kp T                   &kp Y                &kp U              &kp I          &kp O                &kp P                      &kp MINUS
+&kp EQUAL   &hrml LEFT_ALT A  &hrml LEFT_SHIFT S  &hrml LCTRL D  &hrml LEFT_GUI F  &kp G                   &kp H                &hrmr RIGHT_GUI J  &hrmr RCTRL K  &hrmr RIGHT_SHIFT L  &hrml RIGHT_ALT SEMICOLON  &kp SINGLE_QUOTE
+&kp GRAVE   &kp Z             &kp X               &kp C          &kp V             &kp B                   &kp N                &kp M              &kp COMMA      &kp DOT              &kp FSLH                   &kp BACKSLASH
+                                                  &mo 1          &kp SPACE         &mt LEFT_SHIFT ENTER    &mt RIGHT_SHIFT TAB  &kp BACKSPACE      &mo 2
             >;
 
-            label = "colemak-dh";
+            label = "qwerty";
         };
     };
 };
