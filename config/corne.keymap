@@ -41,14 +41,14 @@
         compatible = "zmk,combos";
 
         switch-colemak-dh {
-            bindings = <&to 0>;
+            bindings = <&mo 0>;
             key-positions = <4 7>;
             layers = <4>;
             timeout-ms = <50>;
         };
 
         switch-qwert {
-            bindings = <&to 4>;
+            bindings = <&mo 4>;
             key-positions = <31 28>;
             timeout-ms = <50>;
             layers = <4>;
